@@ -1,0 +1,30 @@
+﻿@model IEnumerable<News>
+@{
+    ViewData["Title"] = "News";
+}
+<div class="row">
+    <h2>News List</h2>
+</div>
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Created date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Content</td>
+                    <td>@item.CreatedDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
